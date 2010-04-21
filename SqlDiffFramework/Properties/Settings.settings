@@ -1,0 +1,100 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SqlDiffFramework.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LeftSqlDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.</Value>
+    </Setting>
+    <Setting Name="RightSqlDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">.</Value>
+    </Setting>
+    <Setting Name="NewVersion" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TandemButton_Checked" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TurboSortButton_Checked" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UseLocalDataButton_Checked" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UpdateCatalogFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">catalog.xml</Value>
+    </Setting>
+    <Setting Name="UpdateChecked" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UnreachableRepository" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="WindowState" Type="System.Windows.Forms.FormWindowState" Scope="User">
+      <Value Profile="(Default)">Normal</Value>
+    </Setting>
+    <Setting Name="LeftCsvDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RightCsvDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AutoHighlightButton_Checked" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UpdateRepository" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LeftConnectionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">--</Value>
+    </Setting>
+    <Setting Name="RightConnectionName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">--</Value>
+    </Setting>
+    <Setting Name="AutoExecuteButton_Checked" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="MaxColumnWidth" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="ShowElapsedTimes" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CommandTimeout" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">60</Value>
+    </Setting>
+    <Setting Name="AutoDiffButton_Checked" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="WindowPosition" Type="System.Drawing.Rectangle" Scope="User">
+      <Value Profile="(Default)">0, 0, 0, 0</Value>
+    </Setting>
+    <Setting Name="ConnectionList" Type="CleanCodeControls.Support.ConnectionDetailsCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfConnectionDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionDetails&gt;
+    &lt;ConnectionName&gt;local-master&lt;/ConnectionName&gt;
+    &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;Initial Catalog=master;Integrated Security=True;Persist Security Info=True&lt;/ConnectionString&gt;
+    &lt;DbType&gt;SqlServer&lt;/DbType&gt;
+    &lt;RememberPassword&gt;false&lt;/RememberPassword&gt;
+    &lt;Description&gt;local SSExpress, master DB&lt;/Description&gt;
+  &lt;/ConnectionDetails&gt;
+  &lt;ConnectionDetails&gt;
+    &lt;ConnectionName&gt;local-AdvWorks&lt;/ConnectionName&gt;
+    &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;Initial Catalog=AdventureWorks;Integrated Security=True;Persist Security Info=True&lt;/ConnectionString&gt;
+    &lt;DbType&gt;SqlServer&lt;/DbType&gt;
+    &lt;RememberPassword&gt;false&lt;/RememberPassword&gt;
+    &lt;Description&gt;local SSExpress, AdventureWorks DB&lt;/Description&gt;
+  &lt;/ConnectionDetails&gt;
+&lt;/ArrayOfConnectionDetails&gt;</Value>
+    </Setting>
+    <Setting Name="UpdateCheckInterval" Description="Number of days between update checks" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="MaxHighlightedRowsPerChunk" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="MaxHighlightedRowsTotal" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">50000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
