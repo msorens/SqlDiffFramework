@@ -1,0 +1,271 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0E769CD-2C8F-41DE-AAF6-90ACAFD10B03}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SqlDiffFramework</RootNamespace>
+    <AssemblyName>SqlDiffFramework</AssemblyName>
+    <ApplicationIcon>SqlDiffFramework.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CleanCode, Version=0.9.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CleanCode\CleanCode\bin\Release\CleanCode.dll</HintPath>
+    </Reference>
+    <Reference Include="CleanCode.ChameleonRichTextBoxControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CleanCode\ChameleonRichTextBoxControls\bin\Release\CleanCode.ChameleonRichTextBoxControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CleanCode.DatabaseControls, Version=0.9.29.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CleanCode\DatabaseControls\bin\Release\CleanCode.DatabaseControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CleanCode.DataGridViewControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CleanCode\DataGridViewControls\bin\Release\CleanCode.DataGridViewControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CleanCode.GeneralComponents, Version=0.9.29.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CleanCode\GeneralComponents\bin\Release\CleanCode.GeneralComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="CleanCode.SqlEditorControls, Version=0.9.29.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CleanCode\SqlEditorControls\bin\Release\CleanCode.SqlEditorControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Diff, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Projects-external\TaubererDiffEngine\bin\Diff.dll</HintPath>
+    </Reference>
+    <Reference Include="HertelDifferenceEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Projects-external\HertelDiffEngine\HertelDiffEngine\bin\Release\HertelDifferenceEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqBridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c2b14eb747628076, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\LinqBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="OptionsLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Projects-external\OptionsForm\OptionsLib\bin\Release\OptionsLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PotterDifferenceEngine, Version=1.0.3180.20137, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Projects-external\PotterDiffEngine\DifferenceEngine\bin\Release\PotterDifferenceEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="SearchableControls, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Projects-external\SearchableControls\bin\Release\SearchableControls.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxHighlightingTextBox, Version=1.1.3419.31506, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Projects-external\SyntaxHighlightingTextBox\SyntaxHighlightingTextBox\bin\Release\SyntaxHighlightingTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\assembly\GAC_32\System.Data.OracleClient\2.0.0.0__b77a5c561934e089\System.Data.OracleClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VDialog, Version=1.4.2923.30375, Culture=neutral, PublicKeyToken=75b9120f15a46176, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Projects-external\VDialog\bin\VDialog.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchResultsForm.designer.cs">
+      <DependentUpon>BatchResultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchSetupForm.designer.cs">
+      <DependentUpon>BatchSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiffChunk.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SDFOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SDFOptionsForm.Designer.cs">
+      <DependentUpon>SDFOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsPanels\DifferencePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionsPanels\DifferencePanel.Designer.cs">
+      <DependentUpon>DifferencePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsPanels\GeneralPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OptionsPanels\GeneralPanel.Designer.cs">
+      <DependentUpon>GeneralPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PotterDiffAdapter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressBarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgressBarForm.Designer.cs">
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchResultsForm.resx">
+      <DependentUpon>BatchResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BatchSetupForm.resx">
+      <DependentUpon>BatchSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsPanels\DifferencePanel.resx">
+      <DependentUpon>DifferencePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsPanels\GeneralPanel.resx">
+      <DependentUpon>GeneralPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProgressBarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\current-diff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first-diff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next-diff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous-diff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last-diff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\script_lightning.png" />
+    <None Include="Resources\link.gif" />
+    <None Include="Resources\hilight.gif" />
+    <None Include="Resources\turboSort.gif" />
+    <None Include="Resources\SqlDiff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progress.gif" />
+    <None Include="Resources\Logo_32x32_twisted.ico" />
+    <None Include="Resources\UserGuideCover_AboutBox.jpg" />
+    <Content Include="SqlDiffFramework.ico" />
+    <None Include="Resources\current-diff-set.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>:: Setup env just as VS command prompt does
+call "$(DevEnvDir)..\Tools\vsvars32.bat"
+
+:: set &gt; "$(TargetDir)temp.txt"
+
+copy /B /Y "$(TargetPath)" "$(TargetDir)$(TargetName)_LARGE$(TargetExt)"
+if errorlevel 1 goto BuildEventFailed
+
+editbin /LargeAddressAware "$(TargetDir)$(TargetName)_LARGE$(TargetExt)"
+if errorlevel 1 goto BuildEventFailed
+
+:: Exit properly because the build will not fail 
+:: unless the final step exits with an error code
+:: From http://geekswithblogs.net/dchestnutt/archive/2006/05/30/80113.aspx
+goto BuildEventOK
+
+:BuildEventFailed
+echo POSTBUILDSTEP for $(ProjectName) FAILED
+exit 1
+
+:BuildEventOK
+echo POSTBUILDSTEP for $(ProjectName) COMPLETED OK
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>
