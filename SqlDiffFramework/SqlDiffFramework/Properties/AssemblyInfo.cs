@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CleanCode")]
 [assembly: AssemblyProduct("SqlDiffFramework")]
-[assembly: AssemblyCopyright("Copyright © 2009 Michael Sorens")]
+[assembly: AssemblyCopyright("Copyright © 2009-2010 Michael Sorens")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("0.95.0.12")]
-[assembly: AssemblyFileVersion("0.95.0.12")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

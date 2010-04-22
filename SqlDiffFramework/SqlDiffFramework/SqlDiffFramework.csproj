@@ -36,55 +36,71 @@
   <ItemGroup>
     <Reference Include="CleanCode, Version=0.9.19.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CleanCode\CleanCode\bin\Release\CleanCode.dll</HintPath>
+      <HintPath>..\..\CleanCode_libraries\CleanCode.dll</HintPath>
     </Reference>
     <Reference Include="CleanCode.ChameleonRichTextBoxControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CleanCode\ChameleonRichTextBoxControls\bin\Release\CleanCode.ChameleonRichTextBoxControls.dll</HintPath>
+      <HintPath>..\..\CleanCode_libraries\CleanCode.ChameleonRichTextBoxControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CleanCode.CsvProcessing, Version=0.9.33.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\CleanCode_libraries\CleanCode.CsvProcessing.dll</HintPath>
     </Reference>
     <Reference Include="CleanCode.DatabaseControls, Version=0.9.29.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CleanCode\DatabaseControls\bin\Release\CleanCode.DatabaseControls.dll</HintPath>
+      <HintPath>..\..\CleanCode_libraries\CleanCode.DatabaseControls.dll</HintPath>
     </Reference>
     <Reference Include="CleanCode.DataGridViewControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CleanCode\DataGridViewControls\bin\Release\CleanCode.DataGridViewControls.dll</HintPath>
+      <HintPath>..\..\CleanCode_libraries\CleanCode.DataGridViewControls.dll</HintPath>
     </Reference>
     <Reference Include="CleanCode.GeneralComponents, Version=0.9.29.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CleanCode\GeneralComponents\bin\Release\CleanCode.GeneralComponents.dll</HintPath>
+      <HintPath>..\..\CleanCode_libraries\CleanCode.GeneralComponents.dll</HintPath>
     </Reference>
     <Reference Include="CleanCode.SqlEditorControls, Version=0.9.29.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\CleanCode\SqlEditorControls\bin\Release\CleanCode.SqlEditorControls.dll</HintPath>
+      <HintPath>..\..\CleanCode_libraries\CleanCode.SqlEditorControls.dll</HintPath>
     </Reference>
     <Reference Include="Diff, Version=0.0.0.0, Culture=neutral">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Projects-external\TaubererDiffEngine\bin\Diff.dll</HintPath>
+      <HintPath>..\..\external_libraries\Diff.dll</HintPath>
+    </Reference>
+    <Reference Include="Dpapi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\external_libraries\Dpapi.dll</HintPath>
     </Reference>
     <Reference Include="HertelDifferenceEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Projects-external\HertelDiffEngine\HertelDiffEngine\bin\Release\HertelDifferenceEngine.dll</HintPath>
+      <HintPath>..\..\external_libraries\HertelDifferenceEngine.dll</HintPath>
     </Reference>
     <Reference Include="LinqBridge, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c2b14eb747628076, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\LinqBridge.dll</HintPath>
+      <HintPath>..\..\external_libraries\LinqBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="LumenWorks.Framework.IO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\external_libraries\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.2.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\external_libraries\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="OptionsLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Projects-external\OptionsForm\OptionsLib\bin\Release\OptionsLib.dll</HintPath>
+      <HintPath>..\..\external_libraries\OptionsLib.dll</HintPath>
     </Reference>
     <Reference Include="PotterDifferenceEngine, Version=1.0.3180.20137, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Projects-external\PotterDiffEngine\DifferenceEngine\bin\Release\PotterDifferenceEngine.dll</HintPath>
+      <HintPath>..\..\external_libraries\PotterDifferenceEngine.dll</HintPath>
     </Reference>
     <Reference Include="SearchableControls, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Projects-external\SearchableControls\bin\Release\SearchableControls.dll</HintPath>
+      <HintPath>..\..\external_libraries\SearchableControls.dll</HintPath>
     </Reference>
     <Reference Include="SyntaxHighlightingTextBox, Version=1.1.3419.31506, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Projects-external\SyntaxHighlightingTextBox\SyntaxHighlightingTextBox\bin\Release\SyntaxHighlightingTextBox.dll</HintPath>
+      <HintPath>..\..\external_libraries\SyntaxHighlightingTextBox.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -99,7 +115,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="VDialog, Version=1.4.2923.30375, Culture=neutral, PublicKeyToken=75b9120f15a46176, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Projects-external\VDialog\bin\VDialog.dll</HintPath>
+      <HintPath>..\..\external_libraries\VDialog.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
