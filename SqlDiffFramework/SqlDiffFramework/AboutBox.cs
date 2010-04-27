@@ -1,11 +1,14 @@
 using System;
+using System.Diagnostics;
+using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using CleanCode.IO;
+using System.ComponentModel;
 
 /*
  * ==============================================================
- * @ID       $Id: AboutBox.cs 894 2010-03-03 14:20:42Z ww $
+ * @ID       $Id: AboutBox.cs 919 2010-04-27 04:34:37Z ww $
  * @created  2008-07-31
  * ==============================================================
  *
@@ -46,6 +49,8 @@ namespace SqlDiffFramework
 	partial class AboutBox : Form
 	{
 		private string nl = Environment.NewLine;
+        private const int MAX_LINK_LENGTH = 53; // this is the limit that will fit for the current form width
+        private const string ABBEREVIATION_INDICATOR = "...";
 
 		public AboutBox()
 		{
@@ -59,28 +64,30 @@ namespace SqlDiffFramework
 			this.labelProductName.Text = AssemblyProduct;
 			this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
 			this.labelCopyright.Text = AssemblyCopyright;
-			this.labelCompanyName.Text = AssemblyCompany;
+
+            CreateAbbreviatedLinkText(labelWebsiteURL, "http://SqlDiffFramework.codeplex.com/");
+            CreateAbbreviatedLinkText(labelDocumentationURL, "http://SqlDiffFramework.codeplex.com/documentation");
+            CreateAbbreviatedLinkText(labelAppDataDirPath, ResourceMgr.ApplicationSpecificApplicationData());
+            CreateAbbreviatedLinkText(labelExePath, Path.GetDirectoryName(Application.ExecutablePath));
 
             this.textBoxDescription.Text = AssemblyDescription + nl + nl
-                + "========= Web Site =========" + nl
-                + "http://cleancode.sourceforge.net/" + nl + nl
-                + "========= Application Data Directory =========" + nl
-                + ResourceMgr.ApplicationSpecificApplicationData() + nl + nl
                 + "========= Assemblies loaded (so far) =========" + nl
-                + string.Join(nl, InstalledAssemblies.Assemblies.ToArray()) + nl + nl
-                + "========= Installer and Documentation =========" + nl
-                + "Repository:" + nl
-                + "      " + Properties.Settings.Default.UpdateRepository + nl
-                + "User Guide (in repository):" + nl
-                + "      " + "SqlDiffFramework User Guide.doc";
-                //+ "Difference engine" + nl
-                //+ "      http://razor.occams.info/code/diff/" + nl
-                //+ "DPAPI engine" + nl
-                //+ "      http://www.gotdotnet.com/Community/UserSamples/Details.aspx?SampleGuid=2CB29D0D-0D24-48A2-AAD6-11900478C689" + nl
-                //+ "CSV reader" + nl
-                //+ "      http://www.codeproject.com/cs/database/CsvReader.asp";
-			
+                + string.Join(nl, InstalledAssemblies.Assemblies.ToArray());
 		}
+
+        private void CreateAbbreviatedLinkText(LinkLabel linkLabel, string targetLink)
+        {
+            if (targetLink.Length > MAX_LINK_LENGTH)
+            {
+                linkLabel.Tag = targetLink;
+                linkLabel.Text = targetLink.Substring(0, MAX_LINK_LENGTH - ABBEREVIATION_INDICATOR.Length - 1) + ABBEREVIATION_INDICATOR;
+            }
+            else
+            {
+                linkLabel.Text = targetLink;
+            }
+            toolTip.SetToolTip(linkLabel, targetLink);
+        }
 
 		#region Assembly Attribute Accessors
 
@@ -173,6 +180,21 @@ namespace SqlDiffFramework
 		{
 			Close();
 		}
+
+        private void label_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string candidateLink = ((LinkLabel)sender).Text;
+            // if the link has the "abbreviation" indicator, get the full URL from the Tag.
+            string link = candidateLink.EndsWith(ABBEREVIATION_INDICATOR) ? ((LinkLabel)sender).Tag.ToString() : candidateLink;
+            try
+            { Process.Start(link); }
+            catch (FileNotFoundException) // probably should never occur here
+            { MessageBox.Show("Unable to open: " + nl + link, "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch (ArgumentException) // probably should never occur here
+            { MessageBox.Show("No link specified", "Unable to open link", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            catch (Win32Exception ex) // occurs if e.g. AppDir has not yet been created
+            { MessageBox.Show(link + nl + "Error: " + ex.Message, "Unable to open link", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
 
 	}
 }
