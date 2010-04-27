@@ -1,10 +1,10 @@
 SqlDiffFramework is designed for the enterprise! Check with your system administrator for how to:
-
--- Setup your instance to point to the repository for SqlDiffFramework updates (if any) so you will be notified of updates.
-
--- Load a set of of default database connections for your environment.
-
+>> Point to the SqlDiffFramework repository (if any) so you will be notified of updates.
+>> Load a set of of default database connections for your environment.
 
 - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - -
+SqlDiffFramework is easy to use but, please, do yourself a favor
+and review the user guide at http://SqlDiffFramework.codeplex.com/documentation.
 
-If you selected the large-address-space install, be sure your machine is configured to boot with the /3GB option (see http://technet.microsoft.com/en-us/sysinternals/bb963892.aspx).
+- - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - -
+If you selected the large-address-space install, be sure your machine is configured to boot with the /3GB option (see http://support.microsoft.com/kb/833721).
