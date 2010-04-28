@@ -6,10 +6,11 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using CleanCode.Forms;
+using System.Text.RegularExpressions;
 
 /*
  * ==============================================================
- * @ID       $Id: BatchSetupForm.cs 894 2010-03-03 14:20:42Z ww $
+ * @ID       $Id: BatchSetupForm.cs 923 2010-04-28 19:29:27Z ww $
  * @created  2009-09-01
  * ==============================================================
  *
@@ -215,10 +216,10 @@ namespace SqlDiffFramework
         private void SetErrorProviders()
         {
             errorProvider.SetError(systemRowLabel,
-                (leftSystemLabel.Text.ToLower().Contains("unknown") || rightSystemLabel.Text.ToLower().Contains("unknown")) ?
+                (Regex.IsMatch(leftSystemLabel.Text, "^(--|)$") || Regex.IsMatch(rightSystemLabel.Text, "^(--|)$")) ?
                 "Select connections on main form to set target systems" : "");
             errorProvider.SetError(sourceRowLabel,
-                (leftSourceLabel.Text == "." || rightSourceLabel.Text == ".") ?
+                (Regex.IsMatch(leftSourceLabel.Text, @"^(\.|)$") || Regex.IsMatch(rightSourceLabel.Text, @"^(.|)$")) ?
                 "Open initial queries on main form to set SQL source directories" : "");
             errorProvider.SetError(snapshotRowLabel,
                 (SaveSnapshots && 
