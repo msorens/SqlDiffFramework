@@ -1,14 +1,15 @@
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using CleanCode.IO;
-using System.ComponentModel;
 
 /*
  * ==============================================================
- * @ID       $Id: AboutBox.cs 919 2010-04-27 04:34:37Z ww $
+ * @ID       $Id: AboutBox.cs 933 2010-05-14 13:39:15Z ww $
  * @created  2008-07-31
  * ==============================================================
  *
@@ -70,7 +71,12 @@ namespace SqlDiffFramework
             CreateAbbreviatedLinkText(labelAppDataDirPath, ResourceMgr.ApplicationSpecificApplicationData());
             CreateAbbreviatedLinkText(labelExePath, Path.GetDirectoryName(Application.ExecutablePath));
 
-            this.textBoxDescription.Text = AssemblyDescription + nl + nl
+            this.textBoxDescription.Text = 
+                string.Format("{0}; version {1}", AssemblyDescription, AssemblyVersion) + nl + nl
+                + "========= Regional Settings =========" + nl
+                + "Input Language: " + InputLanguage.CurrentInputLanguage.Culture.Name + nl
+                + "Current Culture: " + CultureInfo.CurrentCulture.Name + nl
+                + "Current UI Culture: " + CultureInfo.CurrentUICulture.Name + nl + nl
                 + "========= Assemblies loaded (so far) =========" + nl
                 + string.Join(nl, InstalledAssemblies.Assemblies.ToArray());
 		}

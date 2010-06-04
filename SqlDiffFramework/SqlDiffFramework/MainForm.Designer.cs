@@ -91,10 +91,13 @@ namespace SqlDiffFramework
             this.editConnectionsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mirrorQueryMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userGuideMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.showMainKeyReferenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showGeneralKeyReferenceMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showInputKeyReferenceMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showOutputKeyReferenceMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.commandToolStrip = new System.Windows.Forms.ToolStrip();
             this.nextDiffButton = new System.Windows.Forms.ToolStripButton();
@@ -279,7 +282,7 @@ namespace SqlDiffFramework
             // mainSplitContainer.Panel2
             // 
             this.mainSplitContainer.Panel2.Controls.Add(this.rightSqlEditor);
-            this.mainSplitContainer.Size = new System.Drawing.Size(1028, 570);
+            this.mainSplitContainer.Size = new System.Drawing.Size(1028, 545);
             this.mainSplitContainer.SplitterDistance = 512;
             this.mainSplitContainer.TabIndex = 9;
             this.mainSplitContainer.TabStop = false;
@@ -300,7 +303,7 @@ namespace SqlDiffFramework
             this.leftSqlEditor.Name = "leftSqlEditor";
             this.leftSqlEditor.Partner = null;
             this.leftSqlEditor.ShowBooleansAsCheckBoxes = false;
-            this.leftSqlEditor.Size = new System.Drawing.Size(512, 570);
+            this.leftSqlEditor.Size = new System.Drawing.Size(512, 545);
             this.leftSqlEditor.SqlPath = ".";
             this.leftSqlEditor.StaleQueryColor = System.Drawing.Color.LightSteelBlue;
             this.leftSqlEditor.TabIndex = 0;
@@ -326,7 +329,7 @@ namespace SqlDiffFramework
             this.rightSqlEditor.Name = "rightSqlEditor";
             this.rightSqlEditor.Partner = null;
             this.rightSqlEditor.ShowBooleansAsCheckBoxes = false;
-            this.rightSqlEditor.Size = new System.Drawing.Size(512, 570);
+            this.rightSqlEditor.Size = new System.Drawing.Size(512, 545);
             this.rightSqlEditor.SqlPath = ".";
             this.rightSqlEditor.StaleQueryColor = System.Drawing.Color.LightSteelBlue;
             this.rightSqlEditor.TabIndex = 0;
@@ -347,7 +350,7 @@ namespace SqlDiffFramework
             // 
             this.toolStripContainer1.ContentPanel.AutoScroll = true;
             this.toolStripContainer1.ContentPanel.Controls.Add(this.mainSplitContainer);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1028, 570);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1028, 545);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -396,7 +399,7 @@ namespace SqlDiffFramework
             // 
             this.newWorkspaceToolStripMenuItem.Name = "newWorkspaceToolStripMenuItem";
             this.newWorkspaceToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newWorkspaceToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.newWorkspaceToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.newWorkspaceToolStripMenuItem.Text = "&New Workspace";
             this.newWorkspaceToolStripMenuItem.ToolTipText = "Open another instance of SqlDiffFramework";
             this.newWorkspaceToolStripMenuItem.Click += new System.EventHandler(this.newWorkspaceMenuItem_Click);
@@ -404,14 +407,14 @@ namespace SqlDiffFramework
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(217, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(211, 6);
             // 
             // newQueryMenuItem
             // 
             this.newQueryMenuItem.Name = "newQueryMenuItem";
             this.newQueryMenuItem.ShortcutKeyDisplayString = "";
             this.newQueryMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
-            this.newQueryMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.newQueryMenuItem.Size = new System.Drawing.Size(214, 22);
             this.newQueryMenuItem.Text = "Ne&w Query";
             this.newQueryMenuItem.Click += new System.EventHandler(this.newQueryMenuItem_Click);
             // 
@@ -420,20 +423,20 @@ namespace SqlDiffFramework
             this.openQueryToolStripMenuItem.Name = "openQueryToolStripMenuItem";
             this.openQueryToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.openQueryToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.O)));
-            this.openQueryToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.openQueryToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.openQueryToolStripMenuItem.Text = "&Open Query";
             this.openQueryToolStripMenuItem.Click += new System.EventHandler(this.openQueryToolStripMenuItem_Click);
             // 
             // toolStripSeparator16
             // 
             this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(217, 6);
+            this.toolStripSeparator16.Size = new System.Drawing.Size(211, 6);
             // 
             // saveLeftQueryMenuItem
             // 
             this.saveLeftQueryMenuItem.Name = "saveLeftQueryMenuItem";
             this.saveLeftQueryMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F8)));
-            this.saveLeftQueryMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.saveLeftQueryMenuItem.Size = new System.Drawing.Size(214, 22);
             this.saveLeftQueryMenuItem.Text = "Save &Left Query";
             this.saveLeftQueryMenuItem.Click += new System.EventHandler(this.saveLeftQueryMenuItem_Click);
             // 
@@ -441,20 +444,20 @@ namespace SqlDiffFramework
             // 
             this.saveRightQueryMenuItem.Name = "saveRightQueryMenuItem";
             this.saveRightQueryMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F9)));
-            this.saveRightQueryMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.saveRightQueryMenuItem.Size = new System.Drawing.Size(214, 22);
             this.saveRightQueryMenuItem.Text = "Save &Right Query";
             this.saveRightQueryMenuItem.Click += new System.EventHandler(this.saveRightQueryMenuItem_Click);
             // 
             // toolStripSeparator18
             // 
             this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(217, 6);
+            this.toolStripSeparator18.Size = new System.Drawing.Size(211, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitMenuItem_Click);
             // 
@@ -751,14 +754,29 @@ namespace SqlDiffFramework
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userGuideMenuItem,
+            this.toolStripSeparator9,
             this.showMainKeyReferenceToolStripMenuItem,
             this.showGeneralKeyReferenceMenuItem,
             this.showInputKeyReferenceMenuItem,
             this.showOutputKeyReferenceMenuItem,
+            this.toolStripSeparator8,
             this.aboutMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // userGuideMenuItem
+            // 
+            this.userGuideMenuItem.Name = "userGuideMenuItem";
+            this.userGuideMenuItem.Size = new System.Drawing.Size(287, 22);
+            this.userGuideMenuItem.Text = "&User Guide";
+            this.userGuideMenuItem.Click += new System.EventHandler(this.userGuideMenuItem_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(284, 6);
             // 
             // showMainKeyReferenceToolStripMenuItem
             // 
@@ -791,6 +809,11 @@ namespace SqlDiffFramework
             this.showOutputKeyReferenceMenuItem.Size = new System.Drawing.Size(287, 22);
             this.showOutputKeyReferenceMenuItem.Text = "Show &Output Key Reference";
             this.showOutputKeyReferenceMenuItem.Click += new System.EventHandler(this.showOutputKeyReferenceMenuItem_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(284, 6);
             // 
             // aboutMenuItem
             // 
@@ -1054,9 +1077,9 @@ namespace SqlDiffFramework
             this.missingLinesLabel,
             this.changedLinesButton,
             this.changedLinesLabel});
-            this.reportToolStrip.Location = new System.Drawing.Point(353, 24);
+            this.reportToolStrip.Location = new System.Drawing.Point(3, 49);
             this.reportToolStrip.Name = "reportToolStrip";
-            this.reportToolStrip.Size = new System.Drawing.Size(423, 25);
+            this.reportToolStrip.Size = new System.Drawing.Size(392, 25);
             this.reportToolStrip.TabIndex = 2;
             // 
             // toolStripLabel17
@@ -1318,5 +1341,8 @@ namespace SqlDiffFramework
         private System.Windows.Forms.ToolStripButton addedLinesButton;
         private System.Windows.Forms.ToolStripButton missingLinesButton;
         private System.Windows.Forms.ToolStripButton changedLinesButton;
+        private System.Windows.Forms.ToolStripMenuItem userGuideMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
 	}
 }

@@ -2,13 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows.Forms;
 
 using CleanCode.Data;
@@ -24,11 +27,10 @@ using Algorithm.Diff;
 using HertelDiffEngine;
 using LukeSw.Windows.Forms;
 using PotterDiffEngine;
-using System.ComponentModel;
 
 /*
  * ==============================================================
- * @ID       $Id: MainForm.cs 903 2010-03-16 04:23:13Z ww $
+ * @ID       $Id: MainForm.cs 948 2010-05-31 01:46:27Z ww $
  * @created  2008-07-31
  * ==============================================================
  *
@@ -80,6 +82,12 @@ namespace SqlDiffFramework
 
         private const string PROG_PATTERN = "SqlDiffFramework*.exe";
         private const string WINDOW_PREFIX = "SqlDiffFramework";
+        private const string DOWNLOAD_URL = "http://sqldiffframework.codeplex.com/releases/";
+        private const string USERGUIDE_NAME = "SqlDiffFramework UserGuide.pdf";
+		// Stub PDF file is about 34K from one pdf printer, but 125K from Word.
+		// Give a generous buffer and say that up to 250K is still a stub.
+        private const int USERGUIDE_STUB_LIMIT = 250000;
+        private string userGuideFileName = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), USERGUIDE_NAME);
         private const string READY_MSG = "Ready";
         private const string UNKNOWN_DB_LABEL = "*UNKNOWN*";
 
@@ -302,6 +310,59 @@ namespace SqlDiffFramework
         /********************************************************************/
 
         #region event handlers
+
+        # region CultureInfo monitoring
+
+        // from http://msdn.microsoft.com/en-us/magazine/cc163824.aspx
+
+        private const int WM_SETTINGCHANGE = 0x001A;
+
+        [System.Runtime.InteropServices.DllImport("kernel32.dll", ExactSpelling = true)]
+        private static extern int GetUserDefaultLCID();
+
+        CultureInfo m_ciOld = new CultureInfo(GetUserDefaultLCID());
+
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                // change in a systemwide or policy setting
+                case WM_SETTINGCHANGE:
+
+                    if (m.LParam != IntPtr.Zero)
+                    {
+                        int localeCur = GetUserDefaultLCID();
+                        string val = Marshal.PtrToStringAuto(m.LParam);
+
+                        if (val == "intl")
+                        {
+                            // change in locale settings
+                            Thread thread = Thread.CurrentThread;
+
+                            if (thread.CurrentCulture.LCID != localeCur &&
+                              thread.CurrentCulture.LCID == m_ciOld.LCID)
+                            {
+                                // user default locale has changed — so
+                                // change the current culture.
+                                thread.CurrentCulture = new CultureInfo(localeCur);
+                            }
+                            else
+                            {
+                                // Some individual setting has changed — so
+                                // clear the cached data to pick up that change.
+                                thread.CurrentCulture.ClearCachedData();
+                            }
+
+                            m_ciOld = new CultureInfo(localeCur);
+                        }
+                    }
+                    break;
+            }
+
+            base.WndProc(ref m);
+        }
+
+        # endregion CultureInfo monitoring
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -556,6 +617,58 @@ namespace SqlDiffFramework
             lastAccessed.QueryTextBox.ShowUserCommands();
         }
 
+        private bool IsUserGuideInstalled()
+        {
+            bool userGuideInstalled;
+            try { userGuideInstalled = (new FileInfo(userGuideFileName).Length > USERGUIDE_STUB_LIMIT ); }
+            catch (Exception) { userGuideInstalled = false; }
+            return userGuideInstalled;
+        }
+
+        private bool InstallUserGuide()
+        {
+            bool clipboardLoaded = true;
+            try { Clipboard.SetDataObject(userGuideFileName); }
+            catch (System.Runtime.InteropServices.ExternalException) { clipboardLoaded = false; }
+            string NL = Environment.NewLine;
+
+            VDialog vDialog = new VDialog();
+            vDialog.Buttons = new VDialogButton[]
+                {
+                    new VDialogButton(VDialogResult.OK, "I have downloaded the user guide--open it!"),
+                    new VDialogButton(VDialogResult.Cancel, "Cancel")
+                };
+            vDialog.DefaultButton = VDialogDefaultButton.Button2;
+            vDialog.WindowTitle = "SqlDiffFramework User Guide";
+            vDialog.MainIcon = VDialogIcon.Warning;
+            vDialog.MainInstruction =
+                "You have not yet installed the User Guide" + NL + NL;
+            string website_link_text = "SqlDiffFramework website";
+            vDialog.Content =
+                "Because it is ten times larger than the application itself, the user guide is not installed by default." + NL + NL +
+                "Download the user guide from the " + website_link_text + " and save it to this file name:" + NL +
+                userGuideFileName
+                + (clipboardLoaded ?
+                NL + NL + "(The file path and name have been preloaded on your clipboard--just paste into your browser's 'file save' dialog.)" : "");
+            vDialog.ContentLinks.Add(vDialog.Content.IndexOf(website_link_text), website_link_text.Length);
+            vDialog.LinkClicked += vDialog_LinkClicked;
+
+            // Take the user on faith that, if OK is pressed, he/she has downloaded the user guide.
+            // If one attempts to open it and did not download it, one will just get a pop-up indicator.
+            return (vDialog.Show() == VDialogResult.OK);
+        }
+
+        private void ShowUserGuide()
+        {
+            try { Process.Start(userGuideFileName); }
+            catch (Exception ex) { MessageBox.Show("Cannot open user guide: " + ex.Message); }
+        }
+
+        private void vDialog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try { Process.Start(DOWNLOAD_URL); }
+            catch (Exception ex) { MessageBox.Show("Cannot open website: " + ex.Message); }
+        }
 
         #endregion miscellaneous
 
@@ -578,6 +691,12 @@ namespace SqlDiffFramework
             Close();
         }
 
+        private void userGuideMenuItem_Click(object sender, EventArgs e)
+        {
+            if (IsUserGuideInstalled() || InstallUserGuide())
+            { ShowUserGuide(); }
+        }
+
         private void aboutMenuItem_Click(object sender, EventArgs e)
         {
             // Tried using just Show() first but since main window grabs focus
@@ -588,9 +707,8 @@ namespace SqlDiffFramework
         private void newWorkspaceMenuItem_Click(object sender, EventArgs e)
         {
             SaveUserSettings();
-            ProcessStartInfo psi = new
-                ProcessStartInfo(Application.ExecutablePath);
-            System.Diagnostics.Process.Start(psi);
+            ProcessStartInfo psi = new ProcessStartInfo(Application.ExecutablePath);
+            Process.Start(psi);
         }
 
         private void metaQueriesMenuItem_Click(object sender, EventArgs e)
@@ -656,7 +774,6 @@ namespace SqlDiffFramework
                 sqlEditor.MaxColumnWidth = (int)Properties.Settings.Default.MaxColumnWidth;
             }
         }
-
 
         # endregion menu commands
 
@@ -945,6 +1062,22 @@ namespace SqlDiffFramework
                 tracer.TraceInformation("Resetting file resources:");
                 string fileList = ResetFileResources();
                 tracer.TraceInformation(fileList);
+
+                if (!IsUserGuideInstalled())
+                {
+                    string NL = Environment.NewLine;
+                    VDialog vDialog = new VDialog();
+                    vDialog.Buttons = new VDialogButton[] { new VDialogButton(VDialogResult.OK, "OK") };
+                    vDialog.DefaultButton = VDialogDefaultButton.Button2;
+                    vDialog.WindowTitle = "Important Note on the User Guide";
+                    vDialog.MainIcon = VDialogIcon.Information;
+                    vDialog.MainInstruction = "Welcome to SqlDiffFramework!";
+                    vDialog.Content =
+                        "The User Guide is not installed automatically; " + NL +
+                        "you will likely find it instrumental in getting started, though. " + NL + NL +
+                        "Please go to 'Help menu >> User Guide' for details on installing it.";
+                    vDialog.Show();
+                }
             }
         }
 
@@ -1936,6 +2069,7 @@ namespace SqlDiffFramework
         }
 
         #endregion difference engine
+
 
         /********************************************************************/
 
