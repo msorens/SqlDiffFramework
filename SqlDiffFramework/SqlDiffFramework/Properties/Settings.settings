@@ -68,7 +68,16 @@
     <Setting Name="WindowPosition" Type="System.Drawing.Rectangle" Scope="User">
       <Value Profile="(Default)">0, 0, 0, 0</Value>
     </Setting>
-    <Setting Name="ConnectionList" Type="CleanCodeControls.Support.ConnectionDetailsCollection" Scope="User">
+    <Setting Name="UpdateCheckInterval" Description="Number of days between update checks" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="MaxHighlightedRowsPerChunk" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="MaxHighlightedRowsTotal" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">50000</Value>
+    </Setting>
+    <Setting Name="ConnectionList" Type="CleanCode.DatabaseControls.Support.ConnectionDetailsCollection" Scope="User">
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfConnectionDetails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionDetails&gt;
@@ -86,15 +95,6 @@
     &lt;Description&gt;local SSExpress, AdventureWorks DB&lt;/Description&gt;
   &lt;/ConnectionDetails&gt;
 &lt;/ArrayOfConnectionDetails&gt;</Value>
-    </Setting>
-    <Setting Name="UpdateCheckInterval" Description="Number of days between update checks" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">5</Value>
-    </Setting>
-    <Setting Name="MaxHighlightedRowsPerChunk" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">50</Value>
-    </Setting>
-    <Setting Name="MaxHighlightedRowsTotal" Type="System.Decimal" Scope="User">
-      <Value Profile="(Default)">50000</Value>
     </Setting>
   </Settings>
 </SettingsFile>
