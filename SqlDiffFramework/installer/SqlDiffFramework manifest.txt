@@ -1,27 +1,26 @@
 Index	SourceFilename	TimeStamp	Version	MD5Sum	OriginalSize	FirstSlice	LastSlice	StartOffset	ChunkSuboffset	ChunkCompressedSize	Encrypted
-0	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SqlDiffFramework_LARGE.exe	2010-05-30 18:36:22.000		8b5834be647a054163d812007f38ba28	214528	1	1	0	0	483755	no
-1	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SqlDiffFramework.exe	2010-05-30 18:36:20.000		93ed233cd42ea0954521e246773572ce	214528	1	1	0	214528	483755	no
-2	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SqlDiffFramework.exe.config	2010-05-27 12:44:08.000		d6c41e3e4ec7c4393963c419f981122e	9013	1	1	0	429056	483755	no
-3	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.dll	2010-05-25 20:34:16.000		1b1a8600acb4cb08f1daaed53ba58b55	95232	1	1	0	438069	483755	no
-4	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.ChameleonRichTextBoxControls.dll	2010-05-25 20:34:22.000		2cf929cc6afc87c55f6d2ac0b43a5bbd	102400	1	1	0	533301	483755	no
-5	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.CsvProcessing.dll	2010-05-25 20:34:18.000		6e3133572684b94251c2c68290e6d606	8704	1	1	0	635701	483755	no
-6	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.DatabaseControls.dll	2010-05-25 20:34:20.000		47f40fbea99506ed20712ace9279f53a	135168	1	1	0	644405	483755	no
-7	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.DataGridViewControls.dll	2010-05-25 20:34:20.000		b3a0297f916629a993b90fbf90cb8b0a	53760	1	1	0	779573	483755	no
-8	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.GeneralComponents.dll	2010-05-25 20:34:18.000		efb3ef47af4c8f121762f7bbb4fc652a	41984	1	1	0	833333	483755	no
-9	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.SqlEditorControls.dll	2010-05-25 20:34:24.000		ce54a36bf371daee2dc0d9afd30ad9bc	104448	1	1	0	875317	483755	no
-10	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\Diff.dll	2006-11-27 17:06:00.000		51d218386f3014af91b25202ed3e7ad5	30208	1	1	0	979765	483755	no
-11	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\Dpapi.dll	2009-05-15 10:56:52.000		feafe2acdf01767d1395bd12dec4b3ea	20480	1	1	0	1009973	483755	no
-12	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\HertelDifferenceEngine.dll	2009-08-27 20:47:36.000		bc6fc7c151ba0c1c11729f9c384391b4	6656	1	1	0	1030453	483755	no
-13	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\LinqBridge.dll	2007-11-09 18:28:42.000		f6a52248bde2e37a1e2e48c983161a75	64000	1	1	0	1037109	483755	no
-14	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\LumenWorks.Framework.IO.dll	2005-09-13 05:04:00.000		0c0da70cd1a3f9ce5eff48e23209e01f	32768	1	1	0	1101109	483755	no
-15	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\MySql.Data.dll	2008-08-14 20:17:32.000		b0f4f2023d603ec8bd1382ac4fe9f290	294912	1	1	0	1133877	483755	no
-16	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\OptionsLib.dll	2009-08-16 17:46:54.000		154a67c248343d90549774cc64ee1ea3	56832	1	1	0	1428789	483755	no
-17	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\PotterDifferenceEngine.dll	2009-08-27 20:47:54.000		fce479796c0938ff59e0b73937ace349	20480	1	1	0	1485621	483755	no
-18	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SearchableControls.dll	2009-06-23 20:48:30.000		2422e9a6eb127bf38cabacc97dd50e17	44544	1	1	0	1506101	483755	no
-19	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SyntaxHighlightingTextBox.dll	2009-08-06 20:42:06.000		e0bf1b40d1d5165cf73004343fa33b31	40960	1	1	0	1550645	483755	no
-20	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\VDialog.dll	2008-01-02 15:52:38.000		b98532393b09b7e7fd5d17bb4072c64b	135168	1	1	0	1591605	483755	no
-21	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\installer\license.txt	2010-03-02 08:56:38.000		43c0ef366e4619f0bc1b11eff677caff	1150	1	1	0	1726773	483755	no
-22	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\installer\PADGen\pad_file.xml	2010-05-18 09:23:32.000		21d5ca1d399faa58e8ff9e4366c905f6	12589	1	1	0	1727923	483755	no
-23	C:\usr\ms\devel\Visual Studio 2008\Projects\CleanCode\DatabaseControls\Support\QueryLibrary.xsd	2009-08-19 16:32:40.000		0461e56d58b26c5d1f10a8c27709fa73	2777	1	1	0	1740512	483755	no
-24	C:\usr\ms\devel\Visual Studio 2008\Projects\CleanCode\ChameleonRichTextBoxControls\ResourceFiles\ContextDefinition.xsd	2010-04-14 17:33:02.000		298193b201ae080e36684a5f23657189	7905	1	1	0	1743289	483755	no
-25	C:\usr\ms\devel\Visual Studio 2008\Projects\SqlDiffFramework\installer\SqlDiffFramework UserGuide PlaceHolder.pdf	2010-05-28 14:21:56.000		9a37b040578ce6bfba5a7a47fde8e9fe	34733	1	1	0	1751194	483755	no
+0	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SqlDiffFramework_LARGE.exe	2012-04-16 19:52:48.000		545409544ac87cfd56d13de6aa7faa21	217600	1	1	0	0	472719	no
+1	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SqlDiffFramework.exe	2012-04-16 19:52:46.000		dc8b4c8263c3dee55eeec75b05437d30	217600	1	1	0	217600	472719	no
+2	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SqlDiffFramework.exe.config	2010-10-10 18:49:56.000		8fd1230dac12a97cefad5abcea087a07	8889	1	1	0	435200	472719	no
+3	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.dll	2012-04-12 20:16:20.000		1cf069b31765fef70b846a6ea91112c9	97280	1	1	0	444089	472719	no
+4	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.ChameleonRichTextBoxControls.dll	2012-04-12 20:16:22.000		5104097433b8587ec8370a871b506a0a	102912	1	1	0	541369	472719	no
+5	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.CsvProcessing.dll	2012-04-12 20:16:22.000		5c22f42c3c224a9870cb1610e43d6792	8704	1	1	0	644281	472719	no
+6	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.DatabaseControls.dll	2012-04-12 20:16:22.000		ee90152c93e9b0817f87882d0d2b1504	136192	1	1	0	652985	472719	no
+7	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.DataGridViewControls.dll	2012-04-12 20:16:24.000		d9a41b6c3c823236753b1e45f0e6101d	54272	1	1	0	789177	472719	no
+8	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.GeneralComponents.dll	2012-04-12 20:16:20.000		7cad6995387eacbc75c82ccfab8eb798	43008	1	1	0	843449	472719	no
+9	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\CleanCode.SqlEditorControls.dll	2012-04-12 20:16:24.000		546fd7f62d7075ab54dbda48ca3d2f35	107520	1	1	0	886457	472719	no
+10	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\Diff.dll	2010-09-30 08:51:20.000		51d218386f3014af91b25202ed3e7ad5	30208	1	1	0	993977	472719	no
+11	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\Dpapi.dll	2010-09-30 08:51:20.000		feafe2acdf01767d1395bd12dec4b3ea	20480	1	1	0	1024185	472719	no
+12	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\HertelDifferenceEngine.dll	2010-09-30 08:51:20.000		bc6fc7c151ba0c1c11729f9c384391b4	6656	1	1	0	1044665	472719	no
+13	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\LumenWorks.Framework.IO.dll	2010-09-30 08:51:20.000		0c0da70cd1a3f9ce5eff48e23209e01f	32768	1	1	0	1051321	472719	no
+14	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\MySql.Data.dll	2010-09-30 08:51:20.000		b0f4f2023d603ec8bd1382ac4fe9f290	294912	1	1	0	1084089	472719	no
+15	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\OptionsLib.dll	2010-10-12 20:29:06.000		38d346901ac9004ea252ac08352743ad	57344	1	1	0	1379001	472719	no
+16	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\PotterDifferenceEngine.dll	2010-09-30 08:51:20.000		fce479796c0938ff59e0b73937ace349	20480	1	1	0	1436345	472719	no
+17	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SearchableControls.dll	2010-10-10 19:10:58.000		25ec7d44f742cdd169b0289ff14107b3	45056	1	1	0	1456825	472719	no
+18	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\SyntaxHighlightingTextBox.dll	2010-10-10 19:10:38.000		df884114030e34320b618ac43123fdb5	40960	1	1	0	1501881	472719	no
+19	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\SqlDiffFramework\bin\Release\VDialog.dll	2010-10-12 20:43:32.000		9264f43e241f821ea6b3a49df4f9cbb0	120320	1	1	0	1542841	472719	no
+20	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\installer\license.txt	2010-09-30 08:51:28.000		43c0ef366e4619f0bc1b11eff677caff	1150	1	1	0	1663161	472719	no
+21	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\installer\PADGen\pad_file.xml	2010-09-30 08:51:28.000		21d5ca1d399faa58e8ff9e4366c905f6	12589	1	1	0	1664311	472719	no
+22	C:\usr\ms\devel\dotnet\Projects\CleanCode\DatabaseControls\Support\QueryLibrary.xsd	2010-09-30 09:09:42.000		2097eea7ae5b61737d02b130b6517945	2777	1	1	0	1676900	472719	no
+23	C:\usr\ms\devel\dotnet\Projects\CleanCode\ChameleonRichTextBoxControls\ResourceFiles\ContextDefinition.xsd	2010-09-30 09:09:44.000		e347b6d75f05bee0242c82038546cc96	7905	1	1	0	1679677	472719	no
+24	C:\usr\ms\devel\dotnet\Projects\SqlDiffFramework\installer\SqlDiffFramework UserGuide PlaceHolder.pdf	2010-09-30 08:51:28.000		9a37b040578ce6bfba5a7a47fde8e9fe	34733	1	1	0	1687582	472719	no
