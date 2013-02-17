@@ -3,9 +3,9 @@ set PROGN=SqlDiffFramework
 :: includes trailing backslash
 set OLD_DIR=%~dp0
 C:
-cd "\Program Files\ISTool"
+cd "C:\Program Files (x86)\Inno Setup 5"
 @echo on
-ISTool.exe -compile "%OLD_DIR%%PROGN%.iss"
+ISCC.exe "%OLD_DIR%%PROGN%.iss"
 @echo off
 set OLD_DIR=
 set PROGN=
