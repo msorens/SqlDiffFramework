@@ -20,7 +20,10 @@ for users from novice to expert, including:
 * an exhaustive description of every menu, control, and feature (chapter 4).
 
 # A User Guide (150+ Pages) Designed to Be Read! 
-Available for your convenience in two page sizes (letter or A4).
+Available for your convenience in two page sizes:
+* [User Guide/letter size](https://github.com/msorens/SqlDiffFramework/files/1008351/SqlDiffFramework.UserGuide.pdf)
+* [User Guide/A4 size](https://github.com/msorens/SqlDiffFramework/files/1008359/SqlDiffFramework.UserGuide-A4.pdf)
+
 ![SqlDiffFramework User Guide cover](https://cloud.githubusercontent.com/assets/6817500/26130193/6dfd4002-3a48-11e7-815d-a8e0eba3b6f9.jpg)
 
 # Development
