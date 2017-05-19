@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio - FREE Community Edition 7.0.0.604 (http://www.liquid-technologies.com)-->
+<!-- $Id: QueryLibrary.xsd 971 2010-09-30 16:09:30Z ww $ -->
+<!--
+   - The official license for this file is shown next.
+   - Unofficially, consider this e-postcardware as well:
+   - if you find this module useful, let us know via e-mail, along with
+   - where in the world you are and (if applicable) your website address.
+   -->
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is part of the CleanCode toolbox.
+   -
+   - The Initial Developer of the Original Code is Michael Sorens.
+   - Portions created by the Initial Developer are Copyright (C) 2001-2009
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -
+   - ***** END LICENSE BLOCK ***** -->
+<xsd:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="ArrayOfQuery">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="Query">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="1" name="DbType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="SqlServer" />
+                    <xs:enumeration value="Oracle" />
+                    <xs:enumeration value="MySql" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="1" maxOccurs="1" name="Category" type="xs:token" />
+              <xs:element minOccurs="1" maxOccurs="1" name="QueryType" type="xs:token" />
+              <xs:element minOccurs="0" maxOccurs="1" name="ToolTip" type="xs:string" />
+              <xs:element minOccurs="1" maxOccurs="1" name="QueryText" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xsd:schema>

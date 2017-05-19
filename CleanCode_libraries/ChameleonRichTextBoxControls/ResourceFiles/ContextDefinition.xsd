@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio - FREE Community Edition 7.0.0.604 (http://www.liquid-technologies.com)-->
+<!-- $Id: ContextDefinition.xsd 971 2010-09-30 16:09:30Z ww $ -->
+<!--
+   - The official license for this file is shown next.
+   - Unofficially, consider this e-postcardware as well:
+   - if you find this module useful, let us know via e-mail, along with
+   - where in the world you are and (if applicable) your website address.
+   -->
+<!-- ***** BEGIN LICENSE BLOCK *****
+   - Version: MPL 1.1
+   -
+   - The contents of this file are subject to the Mozilla Public License Version
+   - 1.1 (the "License"); you may not use this file except in compliance with
+   - the License. You may obtain a copy of the License at
+   - http://www.mozilla.org/MPL/
+   -
+   - Software distributed under the License is distributed on an "AS IS" basis,
+   - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+   - for the specific language governing rights and limitations under the
+   - License.
+   -
+   - The Original Code is part of the CleanCode toolbox.
+   -
+   - The Initial Developer of the Original Code is Michael Sorens.
+   - Portions created by the Initial Developer are Copyright (C) 2001-2009
+   - the Initial Developer. All Rights Reserved.
+   -
+   - Contributor(s):
+   -
+   - ***** END LICENSE BLOCK ***** -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EditorContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="Delimiters">
+          <xs:complexType>
+            <xs:all minOccurs="0" maxOccurs="1">
+              <xs:element minOccurs="0" name="CommentTokens">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="BlockCommentStartMark" type="xs:token" />
+                    <xs:element minOccurs="0" name="BlockCommentEndMark" type="xs:token" />
+                  </xs:sequence>
+                  <xs:attributeGroup ref="fontStyleAttributes" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="EndOfLineCommentTokens">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" name="EndOfLineCommentMark" type="xs:token" />
+                  </xs:sequence>
+                  <xs:attributeGroup ref="fontStyleAttributes" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="QuoteTokens">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="QuoteToken">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:token">
+                            <xs:attributeGroup ref="fontStyleAttributes" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="VariableTokens">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="VariableToken">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:token">
+                            <xs:attributeGroup ref="fontStyleAttributes" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="SeparatorTokens" type="xs:string" />
+              <xs:element minOccurs="0" name="NumberTokens">
+                <xs:complexType>
+                  <xs:attributeGroup ref="fontStyleAttributes_WithBgColor" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="0" name="PlaceholderTokens">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PlaceholderStartMark" type="xs:token" />
+                    <xs:element name="PlaceholderEndMark" type="xs:token" />
+                  </xs:sequence>
+                  <xs:attributeGroup ref="fontStyleAttributes_WithBgColor" />
+                </xs:complexType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="WordsAndPhrases">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" maxOccurs="unbounded" name="WordGroup">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="Keyword">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="whiteSpace">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                  <xs:enumeration value="preserve" />
+                                  <xs:enumeration value="replace" />
+                                  <xs:enumeration value="collapse" />
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:attribute>
+                            <xs:attribute name="alias" type="xs:token" use="optional" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attributeGroup ref="fontStyleAttributes" />
+                  <xs:attribute name="type" type="xs:token" use="optional" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="boooleanStringType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="true" />
+      <xs:enumeration value="false" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="fontStyleAttributes">
+    <xs:attribute name="font-family" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="^[a-zA-Z ]+$" /> <!-- allows spaces -->
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="color" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="^[a-zA-Z]+$" /> <!-- disallows spaces -->
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="bold" type="boooleanStringType" use="optional" />
+    <xs:attribute name="italic" type="boooleanStringType" use="optional" />
+  </xs:attributeGroup>
+  <xs:attributeGroup name="fontStyleAttributes_WithBgColor">
+    <xs:attributeGroup ref="fontStyleAttributes" />
+    <xs:attribute name="background-color">
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:pattern value="^[a-zA-Z]+$" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+</xs:schema>
