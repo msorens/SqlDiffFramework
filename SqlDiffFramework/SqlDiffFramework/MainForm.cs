@@ -44,10 +44,11 @@ namespace SqlDiffFramework
 
         private const string PROG_PATTERN = "SqlDiffFramework*.exe";
         private const string WINDOW_PREFIX = "SqlDiffFramework";
-        private const string DOWNLOAD_URL = "http://sqldiffframework.codeplex.com/releases/";
+        // Link to get the user guide
+        private const string DOWNLOAD_URL = "https://github.com/msorens/SqlDiffFramework";
         private const string USERGUIDE_NAME = "SqlDiffFramework UserGuide.pdf";
-		// Stub PDF file is about 34K from one pdf printer, but 125K from Word.
-		// Give a generous buffer and say that up to 250K is still a stub.
+        // Stub PDF file is about 34K from one pdf printer, but 125K from Word.
+        // Give a generous buffer and say that up to 250K is still a stub.
         private const int USERGUIDE_STUB_LIMIT = 250000;
         private string userGuideFileName = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), USERGUIDE_NAME);
         private const string READY_MSG = "Ready";
@@ -1778,10 +1779,10 @@ namespace SqlDiffFramework
 
         private void DisplayHunk(int increment)
         {
-			// The loop allows advancing more than one diff chunk at a time. Two cases:
-			// (1) False positives in Tauberer difference engine--automatically skipped.
-			// (2) Specific diff category selected (added/missing/changed) by user.
-			// In either case, Shift may be used to override and go just to next one.
+            // The loop allows advancing more than one diff chunk at a time. Two cases:
+            // (1) False positives in Tauberer difference engine--automatically skipped.
+            // (2) Specific diff category selected (added/missing/changed) by user.
+            // In either case, Shift may be used to override and go just to next one.
             bool noDiffsFound;
             msgDropDown.Text = "";
             SetDisplayCategoryFilter();

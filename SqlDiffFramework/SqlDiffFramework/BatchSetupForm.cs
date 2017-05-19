@@ -48,11 +48,11 @@ namespace SqlDiffFramework
 
                 // Special mode to include orphans from either side.
                 // Skip the RestrictionLambda and collect files from both sides.
-				IEnumerable<string> partialList =
+                IEnumerable<string> partialList =
                     from f in Directory.GetFiles(LeftSourceLabel).Concat(Directory.GetFiles(RightSourceLabel))
-					where fileMask.FitsOneOfMultipleMasks(Path.GetFileName(f))
-					orderby Path.GetFileName(f)
-					select f;
+                    where fileMask.FitsOneOfMultipleMasks(Path.GetFileName(f))
+                    orderby Path.GetFileName(f)
+                    select f;
                 // Now eliminate duplicates and normalize with path from left (whether or not it exists!).
                 return partialList
                     .GroupBy(f => Path.GetFileName(f))
