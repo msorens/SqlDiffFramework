@@ -51,19 +51,16 @@ Name: english; MessagesFile: compiler:Default.isl
 
 [Types]
 Name: standard; Description: Install standard version
-Name: large; Description: Install large address space version (option useful for WinXP only)
 
 [Components]
-Name: main; Description: Common Files; Types: standard large; Flags: fixed
+Name: main; Description: Common Files; Types: standard; Flags: fixed
 Name: standardExe; Description: SqlDiffFramework standard version executable; Types: standard; Flags: fixed
-Name: largeExe; Description: SqlDiffFramework large address space version executable; Types: large; Flags: fixed
 
 [Tasks]
 Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
 Name: quicklaunchicon; Description: {cm:CreateQuickLaunchIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
 
 [Files]
-Source: "{#MyAppName}_LARGE.exe"; DestDir: "{app}"; DestName: "{#MyAppName}.exe"; Flags: ignoreversion; Components: largeExe
 Source: "{#MyAppName}.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: standardExe
 Source: "{#MyAppName}.exe.config"; DestDir: "{app}"; Flags: ignoreversion
 Source: "CleanCode.dll"; DestDir: "{app}"; Flags: ignoreversion

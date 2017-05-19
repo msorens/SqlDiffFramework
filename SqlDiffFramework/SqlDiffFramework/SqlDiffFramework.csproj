@@ -261,28 +261,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>:: Setup env just as VS command prompt does
-call "$(DevEnvDir)..\Tools\vsvars32.bat"
-
-:: set &gt; "$(TargetDir)temp.txt"
-
-copy /B /Y "$(TargetPath)" "$(TargetDir)$(TargetName)_LARGE$(TargetExt)"
-if errorlevel 1 goto BuildEventFailed
-
-editbin /LargeAddressAware "$(TargetDir)$(TargetName)_LARGE$(TargetExt)"
-if errorlevel 1 goto BuildEventFailed
-
-:: Exit properly because the build will not fail 
-:: unless the final step exits with an error code
-:: From http://geekswithblogs.net/dchestnutt/archive/2006/05/30/80113.aspx
-goto BuildEventOK
-
-:BuildEventFailed
-echo POSTBUILDSTEP for $(ProjectName) FAILED
-exit 1
-
-:BuildEventOK
-echo POSTBUILDSTEP for $(ProjectName) COMPLETED OK
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>
