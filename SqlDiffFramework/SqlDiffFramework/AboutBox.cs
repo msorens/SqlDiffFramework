@@ -29,7 +29,7 @@ namespace SqlDiffFramework
             this.labelCopyright.Text = AssemblyCopyright;
 
             CreateAbbreviatedLinkText(labelWebsiteURL, "https://github.com/msorens/SqlDiffFramework");
-            CreateAbbreviatedLinkText(labelDocumentationURL, "https://github.com/msorens/SqlDiffFramework");
+            CreateAbbreviatedLinkText(labelDocumentationURL, "https://github.com/msorens/SqlDiffFramework/wiki/UserGuide");
             CreateAbbreviatedLinkText(labelAppDataDirPath, ResourceMgr.ApplicationSpecificApplicationData());
             CreateAbbreviatedLinkText(labelExePath, Path.GetDirectoryName(Application.ExecutablePath));
 

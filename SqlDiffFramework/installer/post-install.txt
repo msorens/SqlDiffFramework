@@ -3,8 +3,6 @@ SqlDiffFramework is designed for the enterprise! Check with your system administ
 >> Load a set of of default database connections for your environment.
 
 - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - -
-SqlDiffFramework is easy to use but, please, do yourself a favor
-and review the user guide at http://SqlDiffFramework.codeplex.com/documentation.
 
-- - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - - -- - -
-If you selected the large-address-space install, be sure your machine is configured to boot with the /3GB option (see http://support.microsoft.com/kb/833721).
+SqlDiffFramework is easy to use but, please, do yourself a favor and review
+the user guide at https://github.com/msorens/SqlDiffFramework/wiki/UserGuide.
