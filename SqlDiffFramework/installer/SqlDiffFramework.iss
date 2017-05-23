@@ -14,8 +14,8 @@
 #define HomePage "http://SqlDiffFramework.codeplex.com/"
 #define UserGuideBaseName MyAppName + " UserGuide"
 
-; Be sure to update this MD5 hash if the stub file (#UserGuideBaseName.pdf) changes!
-#define DocStubHash = "'9a37b040578ce6bfba5a7a47fde8e9fe'"
+; Be sure to update this MD5 hash if the stub file ({#UserGuideBaseName}.pdf) changes!
+#define DocStubHash = "'ff80e43948f8da734ef87f7f805fcf03'"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
