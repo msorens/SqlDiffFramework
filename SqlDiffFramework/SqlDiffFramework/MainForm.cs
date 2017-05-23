@@ -44,8 +44,6 @@ namespace SqlDiffFramework
 
         private const string PROG_PATTERN = "SqlDiffFramework*.exe";
         private const string WINDOW_PREFIX = "SqlDiffFramework";
-        // Link to the user guide
-        private const string DOWNLOAD_URL = "https://github.com/msorens/SqlDiffFramework/wiki/UserGuide";
         private const string USERGUIDE_NAME = "SqlDiffFramework UserGuide.pdf";
         // Stub PDF file is about 34K from one pdf printer, but 125K from Word.
         // Give a generous buffer and say that up to 250K is still a stub.
@@ -629,7 +627,7 @@ namespace SqlDiffFramework
 
         private void vDialog_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try { Process.Start(DOWNLOAD_URL); }
+            try { Process.Start(ProjectUrls.USER_GUIDE); }
             catch (Exception ex) { MessageBox.Show("Cannot open website: " + ex.Message); }
         }
 
