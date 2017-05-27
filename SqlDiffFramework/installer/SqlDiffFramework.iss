@@ -61,7 +61,6 @@ Name: standardExe; Description: SqlDiffFramework standard version executable; Ty
 
 [Tasks]
 Name: desktopicon; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
-Name: quicklaunchicon; Description: {cm:CreateQuickLaunchIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked
 
 [Files]
 Source: "{#MyAppName}.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: standardExe
@@ -97,7 +96,6 @@ Name: {group}\{cm:ProgramOnTheWeb,{#MyAppName}}; Filename: {#HomePage}
 Name: {group}\{cm:UninstallProgram,{#MyAppName}}; Filename: {uninstallexe}
 Name: {group}\{#UserGuideBaseName}; Filename: {app}\{#UserGuideBaseName}.pdf
 Name: {commondesktop}\{#MyAppName}; Filename: {app}\{#MyAppName}.exe; Tasks: desktopicon
-Name: {userappdata}\Microsoft\Internet Explorer\Quick Launch\{#MyAppName}; Filename: {app}\{#MyAppName}.exe; Tasks: quicklaunchicon
 
 [Run]
 Filename: {app}\{#MyAppName}.exe; Description: {cm:LaunchProgram,{#MyAppName}}; Flags: nowait postinstall skipifsilent
