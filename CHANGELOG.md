@@ -1,3 +1,14 @@
+----
+## 1.0.4.0 (2017.05.27)
+
+Maintenance Release: Migrating from CodePlex to GitHub
+
+  - Updated code, installer, and wiki to reference GitHub URLs.
+  - Moved user guide into wiki for ease of access.
+  - Added license, changelog, and readme per GitHub conventions.
+  - Made install script compatible with InnoSetup 5.5.9.
+  - Removed option for different binaries due to large address space; not needed since WinXP.
+  - Removed option for adding to Quick Launch; deprecated since Win7.
 
 ----
 ## 1.0.3.0 (2012.04.17)
