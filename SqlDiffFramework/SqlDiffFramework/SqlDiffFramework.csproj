@@ -120,36 +120,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox.cs">
+    <Compile Include="Forms\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox.Designer.cs">
+    <Compile Include="Forms\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="BatchResultsForm.cs">
+    <Compile Include="Forms\BatchResultsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BatchResultsForm.designer.cs">
+    <Compile Include="Forms\BatchResultsForm.designer.cs">
       <DependentUpon>BatchResultsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BatchSetupForm.cs">
+    <Compile Include="Forms\BatchSetupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BatchSetupForm.designer.cs">
+    <Compile Include="Forms\BatchSetupForm.designer.cs">
       <DependentUpon>BatchSetupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DiffChunk.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProjectUrls.cs" />
-    <Compile Include="SDFOptionsForm.cs">
+    <Compile Include="Forms\SDFOptionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SDFOptionsForm.Designer.cs">
+    <Compile Include="Forms\SDFOptionsForm.Designer.cs">
       <DependentUpon>SDFOptionsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OptionsPanels\DifferencePanel.cs">
@@ -166,24 +166,24 @@
     </Compile>
     <Compile Include="PotterDiffAdapter.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProgressBarForm.cs">
+    <Compile Include="Forms\ProgressBarForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProgressBarForm.Designer.cs">
+    <Compile Include="Forms\ProgressBarForm.Designer.cs">
       <DependentUpon>ProgressBarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AboutBox.resx">
+    <EmbeddedResource Include="Forms\AboutBox.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BatchResultsForm.resx">
+    <EmbeddedResource Include="Forms\BatchResultsForm.resx">
       <DependentUpon>BatchResultsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BatchSetupForm.resx">
+    <EmbeddedResource Include="Forms\BatchSetupForm.resx">
       <DependentUpon>BatchSetupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,7 +193,7 @@
     <EmbeddedResource Include="OptionsPanels\GeneralPanel.resx">
       <DependentUpon>GeneralPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProgressBarForm.resx">
+    <EmbeddedResource Include="Forms\ProgressBarForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>ProgressBarForm.cs</DependentUpon>
     </EmbeddedResource>
