@@ -1,10 +1,11 @@
 For an overview, see the [SqlDiffFramework wiki](https://github.com/msorens/SqlDiffFramework/wiki).
 
-# Installation
-After downloading the latest installer run the wizard to tailor the installation to your particular needs, including:
+# Download and Installation
+Go to the [Releases](https://github.com/msorens/SqlDiffFramework/releases) tab to find the installer for the latest release.
+After downloading, run the wizard to tailor the installation to your particular needs, including:
 * installation location; 
-* whether to add a shortcut to your Start menu, desktop, or Quick Launch bar; and
-* Additional considerations for enterprise installation are detailed
+* whether to add a shortcut to your Start menu or desktop;
+* additional considerations for enterprise installation are detailed
 in Chapter 2 (_Getting Started_) of the [SqlDiffFramework User Guide](https://github.com/msorens/SqlDiffFramework/wiki/UserGuide).
 
 # Usage
